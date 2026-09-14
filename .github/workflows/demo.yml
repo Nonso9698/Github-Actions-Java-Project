@@ -25,3 +25,8 @@ jobs:
           distribution: temurin
           java-version: '21'
           cache: maven
+
+      - name: Check Versions
+        run: |
+          java --version
+          mvn --version
