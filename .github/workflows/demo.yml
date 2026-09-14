@@ -33,3 +33,6 @@ jobs:
           
       - name: Compile Application
         run: mvn compile
+
+      - name: Run Tests
+        run: mvn test
