@@ -5,7 +5,7 @@ on:
       - 'feature/**'
   build:
     needs: information
-    runs-on: devops-shack
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - name: Checkout Repository
