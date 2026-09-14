@@ -39,3 +39,9 @@ jobs:
 
       - name: Package Application
         run: mvn package
+
+      - name: Upload Application
+        uses: actions/upload-artifact@v7
+        with:
+          name: java-application
+          path: target/*.jar
