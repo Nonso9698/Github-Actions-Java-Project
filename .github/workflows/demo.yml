@@ -3,27 +3,10 @@ on:
     branches:
       - main
       - 'feature/**'
-    # paths:
-    #   - 'src/**'
-    #   - 'pom.xml'
-
-  # pull_request:
-  #   branches:
-  #     - main
-
-  # workflow_dispatch:
-  #   inputs:
-  #     java_version:
-  #       description: Java Version
-  #       required: true
-  #       default: '21'
-  #       type: choice
-  #       options:
-  #         - '17'
-  #         - '21'
-  #         - '25'
-  #     run_tests:
-  #       description: Run Tests
-  #       required: true
-  #       default: true
-  #       type: boolean
+  build:
+    needs: information
+    runs-on: devops-shack
+    timeout-minutes: 10
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v7
